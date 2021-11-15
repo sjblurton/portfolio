@@ -9,8 +9,7 @@ export const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-inline: clamp(8px, 15%, 200px);
-  padding-block: 8px;
+  padding: 8px clamp(8px, 15%, 200px) 8px clamp(8px, 15%, 200px);
 `
 
 export const Name = styled.h3`
