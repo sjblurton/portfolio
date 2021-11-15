@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { colors } from "../../../theme/colors"
 
 export const Section = styled.section`
   width: 100%;
@@ -20,7 +19,7 @@ export const Container = styled.div`
 `
 
 export const Span = styled.span`
-  color: ${colors.primary};
+  color: ${props => props.theme.primary};
 `
 
 export const ButtonContainer = styled.div`

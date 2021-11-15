@@ -1,10 +1,9 @@
 import styled from "styled-components"
-import { colors } from "../../../../theme/colors"
 
 export const Skill = styled.a`
   width: ${props => (props.size === "large" ? "100px" : "64px")};
   height: ${props => (props.size === "large" ? "100px" : "64px")};
-  background: ${colors.light};
+  background: ${props => props.theme.light};
   border-radius: 50%;
   display: flex;
   align-items: center;

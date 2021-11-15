@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { colors } from "../../../../theme/colors"
 
 export const ColoredSection = styled.section`
   display: flex;
@@ -8,7 +7,7 @@ export const ColoredSection = styled.section`
   justify-content: space-around;
   align-items: center;
   position: relative;
-  background: ${colors.primary};
+  background: ${props => props.theme.primary};
   width: 100%;
   min-height: 100vh;
   padding-block: 60px;
@@ -29,7 +28,7 @@ export const CommonStyle = css`
     height: 30px;
   }
   & #shape-fill {
-    fill: ${colors.white};
+    fill: ${props => props.theme.white};
   }
 `
 

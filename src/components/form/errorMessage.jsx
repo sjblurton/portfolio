@@ -10,7 +10,7 @@ export default ErrorText
 
 const Wrapper = styled.div`
   position: relative;
-  color: ${colors.error};
+  color: ${props => props.theme.error};
   background-color: ${colors.errorOpacity};
   padding: 8px;
   border-radius: 8px;
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid ${colors.errorOpacity};
+    border-bottom: 10px solid ${props => props.theme.errorOpacity};
     top: -10px;
   }
 `

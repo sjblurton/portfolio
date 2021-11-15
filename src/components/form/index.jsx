@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Formik, Form } from "formik"
 import { Button } from "../shared"
 import { initialValues, onSubmit, validationSchema } from "./formSchema"
-import { colors } from "../../theme/colors"
 
 const FormikForm = ({ children, formValues, ...restProps }) => {
   return (
@@ -38,7 +37,7 @@ const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: ${colors.primaryMaxOpacity};
+  background: ${props => props.theme.primaryMaxOpacity};
   padding: 32px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);

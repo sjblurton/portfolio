@@ -1,10 +1,9 @@
 import styled from "styled-components"
-import { colors } from "../../../theme/colors"
 
 export const Nav = styled.nav`
   width: 100%;
-  background: ${colors.header};
-  color: ${colors.white};
+  background: ${props => props.theme.header};
+  color: ${props => props.theme.white};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +12,7 @@ export const Nav = styled.nav`
 `
 
 export const Name = styled.h3`
-  color: ${colors.white};
+  color: ${props => props.theme.white};
   cursor: pointer;
 `
 
@@ -49,7 +48,7 @@ export const ListItem = styled.li`
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 350ms ease;
-    background-color: ${colors.white};
+    background-color: ${props => props.theme.white};
   }
   &:hover::after {
     transform: scaleX(1);
@@ -61,8 +60,8 @@ export const Burger = styled.div`
   position: relative;
   height: 16px;
   width: 28px;
-  border-bottom: 3px solid ${colors.white};
-  border-top: 3px solid ${colors.white};
+  border-bottom: 3px solid ${props => props.theme.white};
+  border-top: 3px solid ${props => props.theme.white};
   cursor: pointer;
   &:before {
     content: "";
@@ -71,7 +70,7 @@ export const Burger = styled.div`
     transform: translateY(-50%);
     width: 100%;
     height: 2px;
-    background: ${colors.white};
+    background: ${props => props.theme.white};
   }
   @media (min-width: 768px) {
     display: none;

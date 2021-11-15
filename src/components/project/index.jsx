@@ -1,35 +1,12 @@
-import React, { useContext, useEffect, useState } from "react"
+import React from "react"
 import { Button } from "../shared"
-import {
-  ButtonContainer,
-  Card,
-  Description,
-  Image,
-  List,
-  Title,
-} from "./styles"
-import { getImage } from "gatsby-plugin-image"
-import { ImageContext } from "../../service"
+import { ButtonContainer, Card, Description, List, Title } from "./styles"
 
 export function WorkCard(props) {
-  const [image, setImage] = useState(null)
-  const { id, title, description, technologies, code, live } = props
-  const { allImageSharp } = useContext(ImageContext)
-
-  useEffect(() => {
-    if (allImageSharp) {
-      setImage(
-        getImage(
-          allImageSharp?.edges.filter(node => node.node.id === id)[0].node
-            .gatsbyImageData
-        )
-      )
-    }
-  }, [allImageSharp, id])
+  const { title, description, technologies, code, live } = props
 
   return (
     <Card>
-      {image && <Image image={image} alt={title} />}
       <Title>{title}</Title>
       <Description>{description}</Description>
       <List>

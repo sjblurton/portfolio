@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { colors } from "../../../theme/colors"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Card = styled.div`
@@ -11,7 +10,7 @@ export const Card = styled.div`
   align-items: center;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background: ${colors.white};
+  background: ${props => props.theme.white};
   gap: 16px;
   padding: 16px;
   overflow: hidden;

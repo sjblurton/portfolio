@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { colors } from "../../../theme/colors"
 
 export const Container = styled.nav`
   position: fixed;
@@ -8,8 +7,8 @@ export const Container = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${colors.primary};
-  color: ${colors.white};
+  background: ${props => props.theme.primary};
+  color: ${props => props.theme.white};
   z-index: 100;
   transform: ${props => (props.sidebarOpen ? "scaleY(1)" : "scaleY(0)")};
   transform-origin: bottom;
@@ -47,7 +46,7 @@ export const ListItem = styled.li`
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 350ms ease;
-    background-color: ${colors.white};
+    background-color: ${props => props.theme.white};
   }
   &:hover::after {
     transform: scaleX(1);

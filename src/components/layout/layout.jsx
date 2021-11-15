@@ -2,16 +2,16 @@ import React from "react"
 import Header from "./header"
 import GlobalStyle from "../../theme/GlobalStyles"
 import Footer from "./footer"
-import { ImageContextProvider } from "../../service"
+import StyledComponentsThemeProvider from "../../theme/theme"
 
 const Layout = ({ children }) => {
   return (
-    <ImageContextProvider>
+    <StyledComponentsThemeProvider>
       <GlobalStyle />
       <Header />
       <main style={{ minHeight: "100vh" }}>{children}</main>
       <Footer />
-    </ImageContextProvider>
+    </StyledComponentsThemeProvider>
   )
 }
 
