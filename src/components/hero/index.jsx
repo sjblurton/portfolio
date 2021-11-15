@@ -1,5 +1,11 @@
 import React from "react"
-import { Email, Github, LinkedIn, WhatsApp } from "../../assets/icons/other"
+import {
+  Email,
+  Github,
+  LinkedIn,
+  WhatsApp,
+  CVIcon,
+} from "../../assets/icons/other"
 import { Button, Circle, Grid } from "../shared"
 import { ButtonContainer, Container, Section, Span } from "./styles"
 
@@ -37,6 +43,12 @@ const Hero = () => {
             href="https://www.linkedin.com/in/simon-blurton-0b72554a/"
           >
             <LinkedIn />
+          </Circle>
+          <Circle
+            size="small"
+            href="https://www.linkedin.com/in/simon-blurton-0b72554a/"
+          >
+            <CVIcon />
           </Circle>
         </Grid>
       </Container>
