@@ -14,7 +14,6 @@ import { ImageContext } from "../../service"
 export function WorkCard(props) {
   const { id, title, description, technologies, code, live } = props
   const { allImageSharp } = useContext(ImageContext)
-  console.log(allImageSharp)
   let image = allImageSharp.edges.filter(node => node.node.id === id)[0].node
     .gatsbyImageData
 
