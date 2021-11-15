@@ -44,10 +44,7 @@ const Hero = () => {
           >
             <LinkedIn />
           </Circle>
-          <Circle
-            size="small"
-            href="https://www.linkedin.com/in/simon-blurton-0b72554a/"
-          >
+          <Circle size="small" href="/CV_Simon_Blurton_15-11-2021.pdf">
             <CVIcon />
           </Circle>
         </Grid>
