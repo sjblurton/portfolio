@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Card = styled.div`
   position: relative;
@@ -14,13 +13,6 @@ export const Card = styled.div`
   gap: 16px;
   padding: 16px;
   overflow: hidden;
-`
-
-export const Image = styled(GatsbyImage)`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 80%;
 `
 
 export const Description = styled.p`

@@ -1,30 +1,13 @@
 import React from "react"
 import { Button } from "../shared"
-import {
-  ButtonContainer,
-  Card,
-  Description,
-  Image,
-  List,
-  Title,
-} from "./styles"
-import { getImage } from "gatsby-plugin-image"
+import { ButtonContainer, Card, Description, List, Title } from "./styles"
 
 export function WorkCard(props) {
-  const {
-    image: imageData,
-    title,
-    description,
-    technologies,
-    code,
-    live,
-  } = props
-
-  const image = getImage(imageData)
+  const { image, title, description, technologies, code, live } = props
 
   return (
     <Card>
-      <Image image={image} alt={title} />
+      {image}
       <Title>{title}</Title>
       <Description>{description}</Description>
       <List>

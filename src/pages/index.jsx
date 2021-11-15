@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import {
   Hero,
   WorkCard,
@@ -10,34 +10,11 @@ import {
 } from "../components"
 import { Seo, Layout } from "../components/layout"
 import { Circle, Grid, Section, Title } from "../components/shared"
-import JSONData from "../data/my-projects.json"
-import JSONAboutData from "../data/about.json"
+import { aboutData } from "../data/about.js"
+import { projectData } from "../data/my-projects.js"
 import { MySkills } from "../assets/icons/skills"
-import { graphql, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allImageSharp {
-        edges {
-          node {
-            id
-            gatsbyImageData(
-              placeholder: TRACED_SVG
-              width: 350
-              formats: [AUTO, WEBP, PNG]
-            )
-          }
-        }
-      }
-    }
-  `)
-  const [images, setImages] = useState([])
-
-  useEffect(() => {
-    setImages(data.allImageSharp.edges)
-  }, [data])
-
   return (
     <Layout>
       <Seo title="Simon Blurton" />
@@ -45,23 +22,20 @@ const IndexPage = () => {
       <Section id="work">
         <Title light>My Projects</Title>
         <Grid>
-          {images.length > 0 &&
-            JSONData.map(data => {
-              const image = images.filter(node => node.node.id === data.id)[0]
-                .node.gatsbyImageData
-              return (
-                <WorkCard
-                  image={image}
-                  key={data.id}
-                  id={data.id}
-                  technologies={data.technologies}
-                  description={data.description}
-                  code={data.code}
-                  live={data.live}
-                  title={data.title}
-                />
-              )
-            })}
+          {projectData.map(data => {
+            return (
+              <WorkCard
+                image={data.image}
+                key={data.id}
+                id={data.id}
+                technologies={data.technologies}
+                description={data.description}
+                code={data.code}
+                live={data.live}
+                title={data.title}
+              />
+            )
+          })}
         </Grid>
       </Section>
       <WhiteSection>
@@ -77,20 +51,17 @@ const IndexPage = () => {
       <Section id="about">
         <Title light>About Me</Title>
         <Grid>
-          {images.length > 0 &&
-            JSONAboutData.map(hobby => {
-              const image = images.filter(node => node.node.id === hobby.id)[0]
-                .node.gatsbyImageData
-              return (
-                <AboutCard
-                  image={image}
-                  key={hobby.id}
-                  id={hobby.id}
-                  title={hobby.title}
-                  description={hobby.description}
-                />
-              )
-            })}
+          {aboutData.map(hobby => {
+            return (
+              <AboutCard
+                image={hobby.image}
+                key={hobby.id}
+                id={hobby.id}
+                title={hobby.title}
+                description={hobby.description}
+              />
+            )
+          })}
         </Grid>
       </Section>
       <WhiteSection id="contact">

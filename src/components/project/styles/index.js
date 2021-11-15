@@ -1,4 +1,3 @@
-import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 export const Card = styled.div`
@@ -11,12 +10,6 @@ export const Card = styled.div`
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background: ${props => props.theme.white};
-`
-
-export const Image = styled(GatsbyImage)`
-  width: 100%;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
 `
 
 export const ButtonContainer = styled.div`
