@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {
   Hero,
   WorkCard,
@@ -32,8 +32,11 @@ const IndexPage = () => {
       }
     }
   `)
+  const [images, setImages] = useState([])
 
-  const images = data.allImageSharp.edges
+  useEffect(() => {
+    setImages(data.allImageSharp.edges)
+  }, [data])
 
   return (
     <Layout>
@@ -42,23 +45,23 @@ const IndexPage = () => {
       <Section id="work">
         <Title light>My Projects</Title>
         <Grid>
-          {JSONData.map(data => {
-            const image = images.filter(node => node.node.id === data.id)[0]
-              .node.gatsbyImageData
-
-            return (
-              <WorkCard
-                image={image}
-                key={data.id}
-                id={data.id}
-                technologies={data.technologies}
-                description={data.description}
-                code={data.code}
-                live={data.live}
-                title={data.title}
-              />
-            )
-          })}
+          {images.length > 0 &&
+            JSONData.map(data => {
+              const image = images.filter(node => node.node.id === data.id)[0]
+                .node.gatsbyImageData
+              return (
+                <WorkCard
+                  image={image}
+                  key={data.id}
+                  id={data.id}
+                  technologies={data.technologies}
+                  description={data.description}
+                  code={data.code}
+                  live={data.live}
+                  title={data.title}
+                />
+              )
+            })}
         </Grid>
       </Section>
       <WhiteSection>
@@ -74,19 +77,20 @@ const IndexPage = () => {
       <Section id="about">
         <Title light>About Me</Title>
         <Grid>
-          {JSONAboutData.map(hobby => {
-            const image = images.filter(node => node.node.id === hobby.id)[0]
-              .node.gatsbyImageData
-            return (
-              <AboutCard
-                image={image}
-                key={hobby.id}
-                id={hobby.id}
-                title={hobby.title}
-                description={hobby.description}
-              />
-            )
-          })}
+          {images.length > 0 &&
+            JSONAboutData.map(hobby => {
+              const image = images.filter(node => node.node.id === hobby.id)[0]
+                .node.gatsbyImageData
+              return (
+                <AboutCard
+                  image={image}
+                  key={hobby.id}
+                  id={hobby.id}
+                  title={hobby.title}
+                  description={hobby.description}
+                />
+              )
+            })}
         </Grid>
       </Section>
       <WhiteSection id="contact">
