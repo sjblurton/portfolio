@@ -1,18 +1,40 @@
 import React from "react"
-import Hero from "../components/hero"
+import {
+  Hero,
+  WorkCard,
+  AboutCard,
+  WhiteSection,
+  FormikForm,
+  Input,
+  Textarea,
+} from "../components"
 import { Seo, Layout } from "../components/layout"
-import { WorkCard } from "../components/project"
 import { Circle, Grid, Section, Title } from "../components/shared"
 import JSONData from "../data/my-projects.json"
-import { MySkills } from "../assets/icons/skills"
-import AboutCard from "../components/aboutCard"
 import JSONAboutData from "../data/about.json"
-import WhiteSection from "../components/skills"
-import FormikForm from "../components/form"
-import { Input } from "../components/form/input"
-import { Textarea } from "../components/form/textarea"
+import { MySkills } from "../assets/icons/skills"
+import { graphql, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allImageSharp {
+        edges {
+          node {
+            id
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              width: 350
+              formats: [AUTO, WEBP, PNG]
+            )
+          }
+        }
+      }
+    }
+  `)
+
+  const images = data.allImageSharp.edges
+  console.log(images)
   return (
     <Layout>
       <Seo title="Simon Blurton" />
@@ -21,8 +43,12 @@ const IndexPage = () => {
         <Title light>My Projects</Title>
         <Grid>
           {JSONData.map(data => {
+            const image = images.filter(node => node.node.id === data.id)[0]
+              .node.gatsbyImageData
+
             return (
               <WorkCard
+                image={image}
                 key={data.id}
                 id={data.id}
                 technologies={data.technologies}
