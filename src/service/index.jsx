@@ -1,6 +1,9 @@
 import { useStaticQuery, graphql } from "gatsby"
+import React, { createContext } from "react"
 
-export const ImagesData = () => {
+export const ImageContext = createContext()
+
+export const ImageContextProvider = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
       allImageSharp {
@@ -17,5 +20,6 @@ export const ImagesData = () => {
       }
     }
   `)
-  return data
+
+  return <ImageContext.Provider value={data}>{children}</ImageContext.Provider>
 }

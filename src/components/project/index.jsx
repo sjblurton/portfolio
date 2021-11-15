@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Button } from "../shared"
 import {
   ButtonContainer,
@@ -9,17 +9,16 @@ import {
   Title,
 } from "./styles"
 import { getImage } from "gatsby-plugin-image"
-import { ImagesData } from "../../service"
+import { ImageContext } from "../../service"
 
 export function WorkCard(props) {
-  const data = ImagesData()
   const { id, title, description, technologies, code, live } = props
+  const { allImageSharp } = useContext(ImageContext)
+  console.log(allImageSharp)
+  let image = allImageSharp.edges.filter(node => node.node.id === id)[0].node
+    .gatsbyImageData
 
-  const imageData = data.allImageSharp.edges.filter(
-    node => node.node.id === id
-  )[0].node.gatsbyImageData
-
-  const image = getImage(imageData)
+  image = getImage(image)
 
   return (
     <Card>
