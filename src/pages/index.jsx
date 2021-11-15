@@ -34,7 +34,7 @@ const IndexPage = () => {
   `)
 
   const images = data.allImageSharp.edges
-  console.log(images)
+
   return (
     <Layout>
       <Seo title="Simon Blurton" />
@@ -74,14 +74,19 @@ const IndexPage = () => {
       <Section id="about">
         <Title light>About Me</Title>
         <Grid>
-          {JSONAboutData.map(hobby => (
-            <AboutCard
-              key={hobby.id}
-              id={hobby.id}
-              title={hobby.title}
-              description={hobby.description}
-            />
-          ))}
+          {JSONAboutData.map(hobby => {
+            const image = images.filter(node => node.node.id === hobby.id)[0]
+              .node.gatsbyImageData
+            return (
+              <AboutCard
+                image={image}
+                key={hobby.id}
+                id={hobby.id}
+                title={hobby.title}
+                description={hobby.description}
+              />
+            )
+          })}
         </Grid>
       </Section>
       <WhiteSection id="contact">

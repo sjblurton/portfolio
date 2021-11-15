@@ -19,6 +19,7 @@ export function WorkCard(props) {
     code,
     live,
   } = props
+
   const image = getImage(imageData)
 
   return (
