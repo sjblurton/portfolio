@@ -14,7 +14,7 @@ const FormikForm = ({ children, formValues, ...restProps }) => {
     >
       {formik => {
         return (
-          <StyledForm>
+          <StyledForm name="contact" data-netlify={true}>
             {children}
             <Button
               {...restProps}

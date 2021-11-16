@@ -12,9 +12,24 @@ export const validationSchema = Yup.object({
   message: Yup.string().required("Required"),
 })
 
-export const onSubmit = (values, submitProps) => {
-  console.log("Form data", values)
-  console.log("submitProps", submitProps)
-  submitProps.setSubmitting(false)
-  submitProps.resetForm()
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
+export const onSubmit = (values, actions) => {
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...values }),
+  })
+    .then(() => {
+      alert("Success")
+      actions.resetForm()
+    })
+    .catch(() => {
+      alert("Error")
+    })
+    .finally(() => actions.setSubmitting(false))
 }
