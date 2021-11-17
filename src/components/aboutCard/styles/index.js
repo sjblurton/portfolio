@@ -11,8 +11,9 @@ export const Card = styled.div`
   border-radius: 10px;
   background: ${props => props.theme.white};
   gap: 16px;
-  padding: 16px;
   overflow: hidden;
+  justify-content: space-between;
+  padding-top: 16px;
 `
 
 export const Description = styled.p`

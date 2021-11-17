@@ -9,7 +9,9 @@ export const aboutData = [
         src="../assets/about/program.png"
         alt="programing screen"
         placeholder="blurred"
-        layout="fullWidth"
+        imgStyle={{
+          alignSelf: "end",
+        }}
       />
     ),
 
@@ -24,9 +26,8 @@ export const aboutData = [
         src="../assets/about/climber.png"
         alt="rock climber"
         placeholder="blurred"
-        layout="fullWidth"
         imgStyle={{
-          position: "absolute",
+          alignSelf: "end",
         }}
       />
     ),
@@ -41,9 +42,8 @@ export const aboutData = [
         src="../assets/about/bike.png"
         alt="Mountain Biker"
         placeholder="blurred"
-        layout="fullWidth"
         imgStyle={{
-          position: "absolute",
+          alignSelf: "end",
         }}
       />
     ),
