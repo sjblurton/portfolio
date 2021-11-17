@@ -9,7 +9,7 @@ export const aboutData = [
         src="../assets/about/program.png"
         alt="programing screen"
         placeholder="blurred"
-        Layout="fullWidth"
+        layout="fullWidth"
       />
     ),
 
@@ -24,7 +24,7 @@ export const aboutData = [
         src="../assets/about/climber.png"
         alt="rock climber"
         placeholder="blurred"
-        Layout="fullWidth"
+        layout="fullWidth"
         imgStyle={{
           position: "absolute",
         }}
@@ -41,7 +41,7 @@ export const aboutData = [
         src="../assets/about/bike.png"
         alt="Mountain Biker"
         placeholder="blurred"
-        Layout="fullWidth"
+        layout="fullWidth"
         imgStyle={{
           position: "absolute",
         }}

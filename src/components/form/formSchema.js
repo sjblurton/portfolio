@@ -25,11 +25,13 @@ export const onSubmit = (values, actions) => {
     body: encode({ "form-name": "contact", ...values }),
   })
     .then(() => {
-      alert("Success")
+      alert(
+        `Thank you ${values.name},\n\nyour message was received:\n${values.message}`
+      )
       actions.resetForm()
     })
     .catch(() => {
-      alert("Error")
+      alert("Oops, something went wrong!!!")
     })
     .finally(() => actions.setSubmitting(false))
 }
