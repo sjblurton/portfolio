@@ -1,4 +1,4 @@
-![logo](https://github.com/sjblurton/portfolio/tree/main/src/assets/images/favicon.svg)
+![logo](https://github.com/sjblurton/portfolio/blob/main/src/assets/images/favicon.svg)
 
 # My Portfolio
 
