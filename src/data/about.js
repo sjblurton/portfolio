@@ -9,9 +9,7 @@ export const aboutData = [
         src="../assets/about/program.png"
         alt="programing screen"
         placeholder="blurred"
-        imgStyle={{
-          alignSelf: "end",
-        }}
+        style={{ alignSelf: "end" }}
       />
     ),
 
@@ -23,12 +21,10 @@ export const aboutData = [
     title: "Rock Climber",
     image: (
       <StaticImage
+        style={{ alignSelf: "end" }}
         src="../assets/about/climber.png"
         alt="rock climber"
         placeholder="blurred"
-        imgStyle={{
-          alignSelf: "end",
-        }}
       />
     ),
     description:
@@ -42,9 +38,7 @@ export const aboutData = [
         src="../assets/about/bike.png"
         alt="Mountain Biker"
         placeholder="blurred"
-        imgStyle={{
-          alignSelf: "end",
-        }}
+        style={{ alignSelf: "end" }}
       />
     ),
     description:
