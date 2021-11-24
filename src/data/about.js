@@ -52,7 +52,7 @@ export const aboutData = [
         src="../assets/about/Sea-Shepherd.png"
         alt="Sea Shepherd logo"
         placeholder="blurred"
-        style={{ alignSelf: "center" }}
+        style={{ alignSelf: "center", marginBottom: "16px" }}
       />
     ),
     description:
