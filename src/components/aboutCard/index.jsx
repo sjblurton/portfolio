@@ -1,10 +1,10 @@
 import React from "react"
-import { Card, Description } from "./styles"
+import { Card, Description, Title } from "./styles"
 
 const AboutCard = ({ image, id, title, description, ...restProps }) => {
   return (
     <Card {...restProps}>
-      <h2>{title}</h2>
+      <Title>{title}</Title>
       <Description>{description}</Description>
       {image}
     </Card>

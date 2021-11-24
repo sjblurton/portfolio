@@ -45,4 +45,18 @@ export const aboutData = [
       "Hobbies, are important to challenge ourselves, and help us become better. Mountain biking is a form of meditation to me.",
     id: "6faca857-bacc-51be-941e-1008c4276e4c",
   },
+  {
+    title: "Sea Shepherd Volunteer",
+    image: (
+      <StaticImage
+        src="../assets/about/Sea-Shepherd.png"
+        alt="Sea Shepherd logo"
+        placeholder="blurred"
+        style={{ alignSelf: "center" }}
+      />
+    ),
+    description:
+      "I have been volunteering for Sea Shepherd, as a vegan chef, or as a Deckhand. I'm very proud of doing my part to reduce the amount of illegal poaching of the sea.",
+    id: "b6a6dbc9-b1e4-5dd0-a1f3-6e83161b76c2s",
+  },
 ]

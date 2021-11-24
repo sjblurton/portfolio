@@ -15,7 +15,9 @@ export const Card = styled.div`
   justify-content: space-between;
   padding-top: 16px;
 `
-
+export const Title = styled.h2`
+  text-align: center;
+`
 export const Description = styled.p`
   width: 90%;
   margin-inline: auto;
