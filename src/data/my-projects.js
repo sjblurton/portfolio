@@ -20,7 +20,7 @@ export const projectData = [
     technologies: [
       "Styled Components",
       "Firebase Auth",
-      "Firestore",
+      "Firestore (Read, write, edit, and delete)",
       "multi-page form",
       "SVG deigns",
     ],
