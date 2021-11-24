@@ -31,7 +31,7 @@ const Hero = () => {
           </Circle>
           <Circle
             size="small"
-            href="https://wa.me/5219671724985?text=Hello,+I+am+interested+in+knowing+more+about+your+web+development+skills."
+            href="https://wa.me/5219671724985?text=Hello,+I+am+interested+in+knowing+more+about+your+programming+skills."
           >
             <WhatsApp />
           </Circle>
