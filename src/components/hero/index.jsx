@@ -44,7 +44,7 @@ const Hero = () => {
           >
             <LinkedIn />
           </Circle>
-          <Circle size="small" href="/CV_Simon_Blurton_15-11-2021.pdf">
+          <Circle size="small" href="/CV_Simon_Blurton.pdf">
             <CVIcon />
           </Circle>
         </Grid>
