@@ -5,6 +5,7 @@ import {
   LinkedIn,
   WhatsApp,
   CVIcon,
+  Twitter,
 } from "../../assets/icons/other"
 import { Button, Circle, Grid } from "../shared"
 import { ButtonContainer, Container, Section, Span } from "./styles"
@@ -38,11 +39,11 @@ const Hero = () => {
           <Circle size="small" href="https://github.com/sjblurton">
             <Github />
           </Circle>
-          <Circle
-            size="small"
-            href="https://www.linkedin.com/in/simon-blurton-0b72554a/"
-          >
+          <Circle size="small" href="http://www.linkedin.com/in/simon-blurton">
             <LinkedIn />
+          </Circle>
+          <Circle size="small" href="https://twitter.com/SimonBlurton">
+            <Twitter />
           </Circle>
           <Circle size="small" href="/CV_Simon_Blurton.pdf">
             <CVIcon />

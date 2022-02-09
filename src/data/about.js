@@ -14,7 +14,7 @@ export const aboutData = [
     ),
 
     description:
-      "I love the idea of if there’s a problem, and we don’t need to change the laws of physics to solve it. It’s only a problem of engineering... Software engineers can change the world.",
+      "I love the idea that if there’s a problem, and we don’t need to change the laws of physics to solve it. It’s only a problem of engineering... Software engineers can change the world.",
     id: "3edb9dca-2944-5d96-ac71-ca0734c83986",
   },
   {
@@ -32,26 +32,13 @@ export const aboutData = [
     id: "d9de1aed-8647-55c2-a4d5-8ad2df544b72",
   },
   {
-    title: "Mountain Biker",
-    image: (
-      <StaticImage
-        src="../assets/about/bike.png"
-        alt="Mountain Biker"
-        placeholder="blurred"
-        style={{ alignSelf: "end" }}
-      />
-    ),
-    description:
-      "Hobbies, are important to challenge ourselves, and help us become better. Mountain biking is a form of meditation to me.",
-    id: "6faca857-bacc-51be-941e-1008c4276e4c",
-  },
-  {
     title: "Sea Shepherd Volunteer",
     image: (
       <StaticImage
         src="../assets/about/Sea-Shepherd.png"
         alt="Sea Shepherd logo"
         placeholder="blurred"
+        objectFit="scale-down"
         style={{ alignSelf: "center", marginBottom: "16px" }}
       />
     ),
