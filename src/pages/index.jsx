@@ -42,7 +42,7 @@ const IndexPage = () => {
         <Title>My Skills</Title>
         <Grid style={{ gap: 0 }}>
           {MySkills.map((skill, i) => (
-            <Circle key={i} href='"https://github.com/sjblurton"' size="large">
+            <Circle key={i} href="https://github.com/sjblurton" size="large">
               {skill()}
             </Circle>
           ))}
