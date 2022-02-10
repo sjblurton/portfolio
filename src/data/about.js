@@ -28,7 +28,7 @@ export const aboutData = [
       />
     ),
     description:
-      "Do something that scares you everyday. A sport thats equally, and if not more to do with problem solving, than is to do with strength.",
+      "Do something that scares you everyday. A sport that is at least equally, a game of problem solving, than is a game of strength.",
     id: "d9de1aed-8647-55c2-a4d5-8ad2df544b72",
   },
   {
@@ -43,7 +43,7 @@ export const aboutData = [
       />
     ),
     description:
-      "I have been volunteering for Sea Shepherd, as a vegan chef, or as a Deckhand. I'm very proud of doing my part to reduce the amount of illegal poaching of the sea.",
+      "I have been volunteering for Sea Shepherd as a vegan chef, and as a Deckhand since 2018. I'm very proud of doing my part to reduce the amount of illegal poaching of the sea.",
     id: "b6a6dbc9-b1e4-5dd0-a1f3-6e83161b76c2s",
   },
 ]
