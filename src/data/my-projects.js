@@ -42,7 +42,13 @@ export const projectData = [
       />
     ),
     description: "A full stack CRUD app, built in NEXT.JS using...",
-    technologies: ["Tailwind", "Formik, and Yup", "SEO", "Postgres REST API"],
+    technologies: [
+      "Tailwind",
+      "Formik, and Yup",
+      "SEO",
+      "Postgres REST API",
+      "Typescript",
+    ],
     code: "https://github.com/sjblurton/v-climb-nextjs",
     live: "https://vclimb.vercel.app/",
   },
