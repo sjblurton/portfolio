@@ -22,6 +22,7 @@ function Seo({ description, lang, meta, title }) {
     `
   )
 
+  console.log(site.siteMetadata.twitterImage)
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
@@ -43,13 +44,17 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: "og:url",
-          content: site.siteUrl,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: "og:site_name",
-          content: site.siteName,
+          content: site.siteMetadata.siteName,
         },
-        { name: "image", property: "og:image", content: site.facebookImage },
+        {
+          name: "image",
+          property: "og:image",
+          content: site.siteMetadata.facebookImage,
+        },
         { property: "og:image:width", content: "1200" },
         {
           property: "og:image:height",
@@ -86,11 +91,11 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: "twitter:image",
-          content: site.twitterImage,
+          content: site.siteMetadata.twitterImage,
         },
         {
           property: "twitter:image:alt",
-          content: site.siteName,
+          content: site.siteMetadata.siteName,
         },
         {
           property: "twitter:site",
