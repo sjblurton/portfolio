@@ -12,6 +12,10 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            facebookImage
+            twitterImage
+            siteUrl
+            siteName
           }
         }
       }
@@ -33,6 +37,25 @@ function Seo({ description, lang, meta, title }) {
           name: `description`,
           content: metaDescription,
         },
+        {
+          name: `robots`,
+          content: "follow, index",
+        },
+        {
+          property: "og:url",
+          content: site.siteUrl,
+        },
+        {
+          property: "og:site_name",
+          content: site.siteName,
+        },
+        { name: "image", property: "og:image", content: site.facebookImage },
+        { property: "og:image:width", content: "1200" },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
+
         {
           property: `og:title`,
           content: title,
@@ -60,6 +83,18 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: "twitter:image",
+          content: site.twitterImage,
+        },
+        {
+          property: "twitter:image:alt",
+          content: site.siteName,
+        },
+        {
+          property: "twitter:site",
+          content: "@SimonBlurton",
         },
       ].concat(meta)}
     />

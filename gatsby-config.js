@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Web developer portfolio`,
+    title: `Simon Blurton's developer portfolio`,
+    siteName: "Portfolio: Simon Blurton",
     description: `Simon Blurton, full stack web developer portfolio.`,
     author: `@SimonBlurton`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://simon-blurton.netlify.app/`,
+    facebookImage: "https://simon-blurton.netlify.app/facebook.png",
+    twitterImage: "https://simon-blurton.netlify.app/twitter.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
