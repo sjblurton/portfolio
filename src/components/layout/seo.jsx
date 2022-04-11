@@ -22,7 +22,6 @@ function Seo({ description, lang, meta, title }) {
     `
   )
 
-  console.log(site.siteMetadata.twitterImage)
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 

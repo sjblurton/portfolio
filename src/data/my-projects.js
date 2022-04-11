@@ -52,4 +52,32 @@ export const projectData = [
     code: "https://github.com/sjblurton/v-climb-nextjs",
     live: "https://vclimb.vercel.app/",
   },
+  {
+    title: "My NPM packages",
+    id: "1884ce96-9e4b-5c67-bd61-f3c2315acfea",
+    image: (
+      <div style={{ height: "185px" }}>
+        <StaticImage
+          src="../assets/work/npm.png"
+          alt="npm logo"
+          placeholder="blurred"
+          imgStyle={{
+            layout: "constrained",
+            borderRadius: "10px 10px 0px 0px",
+            height: "185px",
+          }}
+        />
+      </div>
+    ),
+    description:
+      "My playground to make small packages to learn from, and to make future projects easier.",
+    technologies: [
+      "Typescript",
+      "unit testing",
+      "Documentation",
+      "Git version control",
+    ],
+    code: "https://github.com/sjblurton/",
+    live: "https://www.npmjs.com/~sjblurton",
+  },
 ]
