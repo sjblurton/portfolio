@@ -14,7 +14,7 @@ export const aboutData = [
     ),
 
     description:
-      "I love the idea that if there’s a problem, and we don’t need to change the laws of physics to solve it. It’s only a problem of engineering... Software engineers can change the world.",
+      "I love the idea that if there’s a problem, and the laws of physics don't need changing to solve it. Then it’s only a problem of engineering... Software engineers can change the world.",
     id: "3edb9dca-2944-5d96-ac71-ca0734c83986",
   },
   {
@@ -28,7 +28,7 @@ export const aboutData = [
       />
     ),
     description:
-      "Do something that scares you everyday. A sport that is at least equally, a game of problem solving, than is a game of strength.",
+      "Do something that scares you every day. A sport that is at least equally, a game of problem-solving, then is a game of strength.",
     id: "d9de1aed-8647-55c2-a4d5-8ad2df544b72",
   },
   {
